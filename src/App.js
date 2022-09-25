@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import Collections from './components/Collections';
+import Cards from './components/Cards';
+import About from './components/About';
+import Nav from './components/Nav';
 
 function App() {
+  const [ showAbout, setShowAbout ] = useState(false);
+  const [ showCollectionModal, setShowCollectionModal ] = useState(false);
+  const [ selectCollection, setSelectCollection ] = useState("F22/");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <Header />
+      <Collections showCollectionModal={showCollectionModal} setSelectCollection={setSelectCollection}  />
+      <Cards selectCollection={selectCollection} />
+      <About showAbout={showAbout} />
+      <Nav setShowAbout={setShowAbout} showAbout={showAbout} showCollectionModal={showCollectionModal} setShowCollectionModal={setShowCollectionModal} />
     </div>
   );
 }
