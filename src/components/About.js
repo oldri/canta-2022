@@ -1,16 +1,23 @@
-import React from 'react';
-import useData from '../hooks/useData';
+import React, { useState } from 'react';
 import '../App.css';
 
 export default function About({ showAbout }) {
-  //const data = "about";
-  //const [ newData ] = useData(data);
+  const [showEffe, setShowEffe] = useState(false);
+  const [showSeconde, setShowSeconde] = useState(false);
+
+  const handleEffe = () => {
+    setShowEffe(!showEffe);
+  }
+
+  const handleSeconde = () => {
+    setShowSeconde(!showSeconde);
+  }
   
   return (
     <React.Fragment>
       {showAbout && 
       <div className='about'>
-        <h3>ABOUT</h3>
+        <h4>ABOUT</h4>
         <p>
         All products are hand-knitted and carefully crafted. Çanta began as a project that was primarily dedicated to creating hand-knitted bags. 
         Within 6 months, it expanded to include other hand-knitted garments such as dresses, turtlenecks, hats and shawls.<br/><br/>
@@ -37,7 +44,7 @@ export default function About({ showAbout }) {
         <h4>MADE TO ORDER</h4>
         <p>
           To place an order for a product from the catalogue or to request an order for a commission,
-          email canta.nga.loris@gmail.com or DM @c_a_n_t_a_ on Instagram. Allow between 2-3 weeks for
+          email or DM on Instagram. Allow between 2-3 weeks for
           production time. Once the product has been completed, you will be notified via email or DM.<br/>
         </p>
         <h4>SHIPPING</h4>
@@ -61,24 +68,52 @@ export default function About({ showAbout }) {
           Shipping fees are paid for by the consumer.<br/>
         </p>
         <h4>STOCKLIST</h4>
-        <p>
-          Effe: 207 Laurier Ouest, Montreal, Quebec<br/>
-          Seconde: 5274 Boul. St-Laurent, Montreal, Quebec<br/>
-        </p>
+        <span onClick={handleEffe}>Effe
+          {showEffe && <ul>
+              <li>
+                <a className='publications' href='https://effe-store.com/'>Website</a><br/>
+              </li>
+              <li>
+                207 Laurier Ouest, Montreal, Quebec
+              </li>
+            </ul>}
+        </span><br/>
+        <span onClick={handleSeconde}>Seconde Vintage
+          {showSeconde && <ul>
+              <li>
+                <a className='publications' href='https://www.instagram.com/seconde.vintage/?hl=en'>Instagram</a><br/>
+              </li>
+              <li>
+                5274 Boul. St-Laurent, Montreal, Quebec
+              </li>
+            </ul>}
+        </span>
         <h4>CONTACT</h4>
-        <p>
-          Email: canta.nga.loris@gmail.com<br/>
-          Instagram: @c_a_n_t_a_<br/>
-        </p>
-        <h4>PUBLICATIONS</h4>
-        <p>
-          <a className='publications' href='https://www.harpersbazaar.com/it/moda/tendenze/a38358037/brand-emergenti-moda-novita-inverno-2021/'>Harper's Bazaar Italia</a><br/>
-          <a className='publications' href='https://i-d.vice.com/en/article/pkbmd7/montreal-fashion-designers-to-know'>i-D</a><br/>
-          <a className='publications' href='/'>Fashion Magazine</a><br/>
-          <a className='publications' href='https://www.theglobeandmail.com/life/style/article-gift-guide-for-style-lovers-from-handmade-ceramics-to-quirky-handbags/'>Globe and Mail Style Advisor</a><br/>
-          <a className='publications' href='https://albanianpost.com/canta-per-canta/'>Albanian Post</a><br/>
-          <a className='publications' href='https://diasporashqiptare.al/2021/07/15/kanada-loris-kecaj-dhe-suksesi-me-cante-lidhja-me-vendlindjen-time/'>Diaspora Shqiptare</a><br/>
-        </p>
+        <span>
+          <a className='publications' href ="mailto:canta.nga.loris@gmail.com">Email</a><br/>
+        </span>
+        <span>
+          <a className='publications' href ="https://www.instagram.com/c_a_n_t_a_/?hl=en">Instagram</a><br/>
+        </span>
+        <h4>SELECTED PUBLICATIONS</h4>
+        <span>
+          <a className='publications' href='https://www.harpersbazaar.com/it/moda/tendenze/a38358037/brand-emergenti-moda-novita-inverno-2021/'>Harper's Bazaar Italia</a>
+        </span><br/>
+        <span>
+          <a className='publications' href='https://i-d.vice.com/en/article/pkbmd7/montreal-fashion-designers-to-know'>i-D</a>
+        </span><br/>
+        <span>
+          <a className='publications' href='https://fashionmagazine.com/'>Fashion Magazine</a>
+        </span><br/>
+        <span>
+          <a className='publications' href='https://www.theglobeandmail.com/life/style/article-gift-guide-for-style-lovers-from-handmade-ceramics-to-quirky-handbags/'>Globe and Mail Style Advisor</a>
+        </span><br/>
+        <span>
+          <a className='publications' href='https://albanianpost.com/canta-per-canta/'>Albanian Post</a>
+        </span><br/>
+        <span>
+          <a className='publications' href='https://diasporashqiptare.al/2021/07/15/kanada-loris-kecaj-dhe-suksesi-me-cante-lidhja-me-vendlindjen-time/'>Diaspora Shqiptare</a>
+        </span>
       </div>
       }
     </React.Fragment>

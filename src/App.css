@@ -36,6 +36,20 @@ a:hover {
     color: #73ff00;
 }
 
+span {
+    cursor: pointer;
+}
+
+ul {
+    margin-bottom: 0%;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));;
+}
+
 .publications {
     color: white !important;
 }
@@ -43,19 +57,23 @@ a:hover {
 .collections {
     cursor: pointer;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
     grid-gap: 2rem;
     position: fixed;
     bottom: 100px;
+    padding-left: 2.5vw;
     font-size: 1vw;
     z-index: 1;
+}
+
+.collection{
+    color: #000000;
 }
 
 .collection:hover{
     color: #73ff00;
 }
-
 
 .about {
     font-size: 1vw;
@@ -90,6 +108,28 @@ a:hover {
 }
 
 .navOption:hover {
+    color: #73ff00;
+}
+
+#lightbox {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#lightbox-img {
+    height: 90vh;
+    max-width: 90vw;
+    object-fit: cover;
+}
+
+h4{
     color: #73ff00;
 }
 
