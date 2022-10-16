@@ -19,7 +19,7 @@ export default function Card({ index, image }) {
     <img key={index} src={image} alt={image.alt} className='card' onClick={(e) => showImage(e)}/> 
     {lightboxDisplay ? 
       <div id="lightbox" onClick={hideLightbox}>
-        <img id='lightbox-img' key={index} src={imageToShow} alt={image.alt} className='card'/> 
+        <img id='lightbox-img' key={index} src={imageToShow} alt={image.alt} className='lightbox-card'/> 
       </div>
       : ''
     }

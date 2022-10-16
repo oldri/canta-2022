@@ -16,7 +16,7 @@
 }
 
 .card {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     padding: 1rem;
 }
@@ -81,7 +81,7 @@ ul {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: #000000;
+    background: #717171ae;
     color: white;
     padding: 15px;
     width: 50%;
@@ -129,6 +129,12 @@ ul {
     object-fit: cover;
 }
 
+.lightbox-card {
+    width: 30%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
 h4{
     color: #73ff00;
 }
@@ -155,4 +161,5 @@ h4{
         text-align: center;
         z-index: 3;
     }
-  }
+}
+

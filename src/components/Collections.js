@@ -16,7 +16,7 @@ export default function Collections({ showCollectionModal, setSelectCollection }
           <h4 className='collection' onClick={() => handleCollection("SS21/")}>SS21</h4>
           <h4 className='collection' onClick={() => handleCollection("W21/")}>W21</h4>
           <h4 className='collection' onClick={() => handleCollection("SS22/")}>SS22</h4>
-          <h4 className='collection' onClick={() => handleCollection("F22/")}>F22</h4>{/**missing */}
+          <h4 className='collection' onClick={() => handleCollection("F22/")}>F22</h4>
       </div>}
     </React.Fragment>
   )

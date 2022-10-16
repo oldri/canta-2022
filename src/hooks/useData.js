@@ -1,21 +1,24 @@
 import { projectFirestore } from "../firebase/config";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function useData(data){
-    const [ newData, setNewData ]  = useState(null);
-    const docRef = projectFirestore.collection(data).doc(data);
-    
+    const [ newData, setNewData ]  = useState([{ null: null}]);
+
     useEffect(() => {
-        docRef.get().then((doc) => {
-            if (doc.exists) {
-                setNewData(doc.data().homepage)
-            } else {
-                console.log("No such document!");
-            }
-        }).catch((error) => {
-            console.log("Error getting document:", error);
+        projectFirestore.collection(data)
+        .get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                let document = doc.data();
+                let data = newData;
+                data.push(document);
+                setNewData(data);
+            });
+        })
+        .catch((error) => {
+            console.log("Error getting documents: ", error);
         });
-    }, [docRef])
+    },[])
 
     return [ newData ];
 }

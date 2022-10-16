@@ -5,7 +5,7 @@ import useCollection from '../hooks/useCollection'
 
 export default function Cards({ selectCollection }) {
   const [ allImages ] = useCollection(selectCollection);
-
+  
   return (
     <div className='cards'>
      {allImages.map((image, index) => (

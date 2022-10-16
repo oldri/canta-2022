@@ -4,6 +4,7 @@ import '../App.css';
 export default function About({ showAbout }) {
   const [showEffe, setShowEffe] = useState(false);
   const [showSeconde, setShowSeconde] = useState(false);
+  const [showSimons, setShowSimons] = useState(false);
 
   const handleEffe = () => {
     setShowEffe(!showEffe);
@@ -11,6 +12,10 @@ export default function About({ showAbout }) {
 
   const handleSeconde = () => {
     setShowSeconde(!showSeconde);
+  }
+
+  const handleSimons = () => {
+    setShowSimons(!showSimons);
   }
   
   return (
@@ -87,6 +92,16 @@ export default function About({ showAbout }) {
                 5274 Boul. St-Laurent, Montreal, Quebec
               </li>
             </ul>}
+        </span><br/>
+        <span onClick={handleSimons}>Simons
+          {showSimons && <ul>
+            <li>
+              <a className='publications' href='https://www.simons.ca/en/canadian-artisans/makers-a-z/canta--9751'>Website</a><br/>
+            </li>
+            <li>
+              Only available for purchase online
+            </li>
+          </ul>}
         </span>
         <h4>CONTACT</h4>
         <span>
