@@ -13,11 +13,19 @@ export default function News({ showNewsModal }) {
         }
     }
 
-    let news = Array.from(new Set(newData.map(a => a.post)))
+    const news = Array.from(new Set(newData.map(a => a.post)))
     .map(post => {
         return newData.find(a => a.post === post);
     })
 
+    news.sort(function(a,b){
+        if(a.Date && b.Date){
+            return new Date(b.Date.seconds) - new Date(a.Date.seconds);
+        }else{
+            return null;
+        }
+    });
+    
     return (
         <React.Fragment>
             {showNewsModal && <div className='about'>
