@@ -5,6 +5,7 @@ export default function About({ showAbout }) {
   const [showEffe, setShowEffe] = useState(false);
   const [showSeconde, setShowSeconde] = useState(false);
   const [showSimons, setShowSimons] = useState(false);
+  const [showRaddLounge, setShowRaddLounge] = useState(false);
 
   const handleEffe = () => {
     setShowEffe(!showEffe);
@@ -16,6 +17,10 @@ export default function About({ showAbout }) {
 
   const handleSimons = () => {
     setShowSimons(!showSimons);
+  }
+
+  const handleRaddLounge = () => {
+    setShowRaddLounge(!showRaddLounge);
   }
   
   return (
@@ -97,6 +102,16 @@ export default function About({ showAbout }) {
           {showSimons && <ul>
             <li>
               <a className='publications' href='https://www.simons.ca/en/canadian-artisans/makers-a-z/canta--9751'>Website</a><br/>
+            </li>
+            <li>
+              Only available for purchase online
+            </li>
+          </ul>}
+        </span><br/>
+        <span onClick={handleRaddLounge}>RADD LOUNGE
+          {showRaddLounge && <ul>
+            <li>
+              <a className='publications' href='http://www.raddlounge.com/?mode=cate&cbid=2058638&csid=125&sort=n'>Website</a><br/>
             </li>
             <li>
               Only available for purchase online
