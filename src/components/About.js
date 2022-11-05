@@ -30,7 +30,7 @@ export default function About({ showAbout }) {
         <h4>ABOUT</h4>
         <p>
         All products are hand-knitted and carefully crafted. Çanta began as a project that was primarily dedicated to creating hand-knitted bags. 
-        Within 6 months, it expanded to include other hand-knitted garments such as dresses, turtlenecks, hats and shawls.<br/><br/>
+        Within 6 months, it expanded to include other hand-knitted garments such as dresses, turtlenecks, hats, shawls and pillows.<br/><br/>
 
         Çanta directly draws inspiration from the streets, lifestyle, people and products from Shkodër, Albania where the creator of Çanta originates from. 
         Future products will be created through the use of traditional knitting techniques. 
@@ -74,7 +74,7 @@ export default function About({ showAbout }) {
           If there are any flaws in your product due to poor workmanship, do not hesitate to send an email.
           The product can be returned within 45 days and you will receive your money back. 
           You have the option to select a different product for an exchange. 
-          Or, if you would like your product returned back to you once the flaw has been fixed, it can be shipped back to you. 
+          Or, if you would like your product returned back to you once the defect has been fixed, it can be shipped back to you. 
           Shipping fees are paid for by the consumer.<br/>
         </p>
         <h4>STOCKLIST</h4>
