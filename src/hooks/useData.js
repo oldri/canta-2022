@@ -18,7 +18,7 @@ export default function useData(data){
         .catch((error) => {
             console.log("Error getting documents: ", error);
         });
-    },[])
+    },[data, newData])
 
     return [ newData ];
 }
