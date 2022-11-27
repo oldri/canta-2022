@@ -139,6 +139,9 @@ export default function About({ showAbout }) {
           <a className='publications' href='https://www.theglobeandmail.com/life/style/article-gift-guide-for-style-lovers-from-handmade-ceramics-to-quirky-handbags/'>Globe and Mail Style Advisor</a>
         </span><br/>
         <span>
+          <a className='publications' href='https://www.lapresse.ca/societe/mode-et-beaute/2022-11-11/les-nouvelles-de-la-mode.php'>La Presse</a>
+        </span><br/>
+        <span>
           <a className='publications' href='https://albanianpost.com/canta-per-canta/'>Albanian Post</a>
         </span><br/>
         <span>
